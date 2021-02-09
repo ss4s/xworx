@@ -1,6 +1,7 @@
 {
   "name": "nodetest1",
   "version": "0.0.0",
+  "engines": {"node" : "14.15.4"},
   "private": true,
   "scripts": {
     "start": "set NODE_ENV=production && node ./bin/www"
