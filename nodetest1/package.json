@@ -1,0 +1,22 @@
+{
+  "name": "nodetest1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "set NODE_ENV=production && node ./bin/www"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-rate-limit": "^5.2.3",
+    "helmet": "^4.4.1",
+    "http-errors": "~1.6.3",
+    "mongo-express-sanitize": "^1.0.1",
+    "mongodb": "^3.5.4",
+    "monk": "^7.1.2",
+    "morgan": "~1.9.1"
+  }
+}
