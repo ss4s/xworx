@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .background {
+    background: linear-gradient( rgba(30, 11, 54, 0.65), rgba(202, 55, 130, 0.7));
+    padding:2em;
+    margin:1em;
+  }
+  body { 
+    display: grid;
+  }
+  h1, h2{
+    font-family: "Inconsolata", monospace;
+    text-align: center;
+    color: #ffffff;
+  }
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  }
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="background">
+  <h1>ERR: 404</h1>
+</div>
+<div class="background">
+  <h2>Welp, something got fucked up</h2>
+  <h2>If you're seeing this, click on the instagram logo and message me, something has broken</h2>
+
+</div>
+<a href="https://www.instagram.com/shlopshop/?hl=en"> <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"> </a>  <p><%= message %></p>
+<p><%= error.status %></p>
+<p><%= error.stack %></p>
+</body>
+</html>

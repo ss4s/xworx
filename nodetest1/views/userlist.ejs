@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+<div class="contact">
+  <div class="email">Contact me at clarkfischerriv@gmail.com for post removal, problems, or questions!</div>
+  <div class="instagram"><a href="https://www.instagram.com/shlopshop/?hl=en">instagram</a></div>
+</div>
+<div class="title">
+  Welcome to <b>XWorX</b>
+  <div class="subtitle">
+    No signup. No cost. No limits.
+  </div>
+</div>
+<div class="backing">
+  <form id="formAddUser" class="container" name="adduser" method="post" action="/adduser">  
+    <div class="mod1">
+      <div class="input-box"> 
+      <input type="text" class="input-box" placeholder="What Is Your Name?" name="username" required/>
+      </div>
+      <div class="input-box">
+      <input type="text" class="input-box" placeholder="What's Your Project Called?" name="projectname" required/>
+      </div>
+      <div class="input-box">
+      <input class="input-box" type="text" placeholder="How Can Others Contact You? (Instagram, Twitter, etc.)" name="contactpref" required/>
+      </div>
+      <div class="input-box">
+        <input type="text" class="input-box" placeholder="What Is Your Username There?" name="contactname" required/>
+        </div>
+  </div>
+  <div class="mod2">
+    <textarea type="text" class="description" name="desc" placeholder="In 50 words or less, describe your idea; anymore and your description won't show!"></textarea required>
+    <div class="final">
+    <div class="selects">
+      <div class="select1">
+      <select id="cars" name="status" required>
+          <option value="" disabled selected hidden>What is the status of your project?</option>
+          <option value="Idea">Idea</option>
+          <option value="Business">Business</option>
+          <option value="Non-Profit">Non-Profit</option>
+          <option value="Club">Club</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="bttn">
+      <button type="submit">Submit!</button>
+    </div>
+  </div>
+  </div>   
+ 
+  <div class="mod3">
+    <div class="Xpl-title">What is this Site?</div>
+    <div class="Xpl-txt">Are you a student needing stellar ECs for top colleges? Are you looking for interesting projects, co-founders, or voluenteer hours? Welcome to the best page for finding ECs that show drive. Either look through postings below, or make your own and find colaborators on your next big idea!</div>
+  </div>
+</form> 
+
+</div>
+<div class="cards">
+
+  <%
+  var list = '';
+  userlist = userlist.reverse();
+  for (i = 0; i < userlist.length; i++) {
+    list += '<div class="artboard"> <div class="card"><div class="card__side card__side--back"><div class="card__cover"><h4 class="card__heading"><span class="card__heading-span">' + userlist[i].projectname+ '</span></h4></div><div class="card__details"><ul><li>'+ userlist[i].contactpref + '</li><li>' + userlist[i].contactname + '</li><li>' + userlist[i].desc + '</li></ul></div></div><div class="card__side card__side--front"><div class="card__theme"><div class="card__theme-box"><p class="card__subject">' + userlist[i].name +"\'s " +userlist[i].status + '</p><p class="card__title">' + userlist[i].projectname + '</p></div></div></div></div></div>';
+  }
+%>
+<%- list %>
+</div>
+
+</body>
+</html>
