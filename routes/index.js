@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
   var db = req.db;
   var collection = db.get('usercollection');
   collection.find({},{},function(e,docs){
-      res.render('userlist', {
-          "userlist" : docs
+      res.render('index', {
+          "index" : docs
       });
   });
 });
@@ -49,7 +49,7 @@ router.post('/adduser', function(req, res) {
       }
       else {
           // And forward to success page
-          res.redirect("userlist");
+          res.redirect("index");
       }
   });
 
