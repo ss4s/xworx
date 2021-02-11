@@ -49,7 +49,7 @@ router.post('/adduser', function(req, res) {
       }
       else {
           // And forward to success page
-          res.redirect("index");
+          res.redirect("/");
       }
   });
 
